@@ -7,7 +7,7 @@
 export default {
 	computed: {
 		entry() {
-			return this.$store.getters.isLoggedIn ? '/home' : '/login'
+			return '/home'
 		}
 	}
 }

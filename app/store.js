@@ -17,11 +17,11 @@ export default new Vuex.Store({
 
 	mutations: {
 		SET_USER_TOKEN(state, token) {
-			this.userToken = token
+			state.userToken = token
 		},
 
 		SET_USER(state, user) {
-			this.user = state
+			state.user = user
 		}
 	},
 

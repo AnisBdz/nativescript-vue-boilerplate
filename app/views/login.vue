@@ -18,8 +18,8 @@
 	export default {
 		data() {
 			return {
-				username: '',
-				password: ''
+				username: 'admin',
+				password: 'admin'
 			}
 		},
 
@@ -30,7 +30,7 @@
 					password: this.password
 				})
 
-				.then(() => this.$navigator.navigate('/home'))
+				.then(() => this.$navigator.navigate('/account'))
 				.catch(e => alert('Failed Authentication'))
 			}
 		}
