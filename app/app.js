@@ -1,8 +1,8 @@
 import Vue from 'nativescript-vue'
-import App from './App'
-import './router'
+import App from '@/App'
+import '@/routing/router'
 
-import store from './store';
+import store from '@/store';
 Vue.prototype.$store = store
 
 // import VueDevtools from 'nativescript-vue-devtools'

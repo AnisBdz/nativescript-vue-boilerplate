@@ -1,7 +1,7 @@
 import Vue from 'nativescript-vue'
 
 import Navigator from 'nativescript-vue-navigator'
-import routes from '@/routes'
+import routes from './routes'
 import middlewares from '@/middlewares'
 
 Vue.use(Navigator, { routes })
