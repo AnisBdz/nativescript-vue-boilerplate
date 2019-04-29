@@ -6,10 +6,15 @@ import middlewares from '@/middlewares'
 
 Vue.use(Navigator, { routes })
 
-// add middleware functionality
+let navigatorParams = {}
+
+Object.defineProperty(Vue.prototype.$navigator, 'params', {
+    get: function() { return navigatorParams }
+});
+
 Vue.prototype.$navigator._navigate_ = Vue.prototype.$navigator.navigate
 
-Vue.prototype.$navigator.navigate = async function (to, options) {
+Vue.prototype.$navigator.navigate = async function (to, params, options) {
 
 	let route = routes[to]
 
@@ -32,6 +37,9 @@ Vue.prototype.$navigator.navigate = async function (to, options) {
 			})
 		}
 	}
+
+	// set params
+	navigatorParams = params
 
 	// navigate to route
 	this._navigate_(to, options)

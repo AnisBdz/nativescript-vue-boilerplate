@@ -5,5 +5,5 @@ export default new Middleware(function (next) {
 	if (this.$store.getters.isLoggedIn) next()
 
 	// show login else
-	else this.$navigator.navigate('/login', { clearHistory: true })
+	else this.$navigator.navigate('/login', {}, { clearHistory: true })
 })
