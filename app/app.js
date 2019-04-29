@@ -1,12 +1,13 @@
 import Vue from 'nativescript-vue'
-import App from './components/App'
+// import App from './components/App'
 import store from './store';
 
 import Navigator from 'nativescript-vue-navigator'
 import routes from './routes'
 Vue.use(Navigator, { routes })
+Vue.prototype.$store = store
 
-import init from './init'
+import App from './App'
 
 // import VueDevtools from 'nativescript-vue-devtools'
 //
@@ -19,9 +20,8 @@ Vue.config.silent = (TNS_ENV === 'production')
 
 
 const app = new Vue({
-  store,
-  template: '<Navigator />',
-  created: init
+	store,
+	render: h => h(App)
 })
 
 app.$start()
