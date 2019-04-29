@@ -2,6 +2,12 @@ import Vue from 'nativescript-vue'
 import App from './components/App'
 import store from './store';
 
+import Navigator from 'nativescript-vue-navigator'
+import routes from './routes'
+Vue.use(Navigator, { routes })
+
+import init from './init'
+
 import VueDevtools from 'nativescript-vue-devtools'
 
 if(TNS_ENV !== 'production') {
@@ -11,7 +17,10 @@ if(TNS_ENV !== 'production') {
 Vue.config.silent = (TNS_ENV === 'production')
 
 
-new Vue({
+const app = new Vue({
   store,
-  render: h => h('frame', [h(App)])
-}).$start()
+  template: '<Navigator />',
+  created: init
+})
+
+app.$start()
