@@ -2,7 +2,7 @@
   "android": {
     "v8Flags": "--expose_gc"
   },
-  "main": "app",
+  "main": "index",
   "name": "nativescript-vue-boilerplate",
   "version": "0.0.1"
 }
