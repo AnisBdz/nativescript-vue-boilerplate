@@ -3,7 +3,7 @@ import Vue from 'nativescript-vue'
 
 // create custom axios instance
 const api = axios.create({
-	baseURL: 'http://localhost:3333'
+	baseURL: ''
 })
 
 // setup defaults
@@ -20,7 +20,7 @@ const interseptor = api.interceptors.request.use(() => {}, error => {
 			vue.$navigator.navigate('/login')
 		}
 	}
-})
+// })
 
 
-export default api
+export default axios
