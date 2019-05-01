@@ -9,8 +9,10 @@ import '@/state'
 //   Vue.use(VueDevtools)
 // }
 
+import api from '@/services/api'
+
 // Prints Vue logs when --env.production is *NOT* set while building
-Vue.config.silent = (TNS_ENV === 'production')
+Vue.config.silent = false
 
 const app = new Vue({
 	render: h => h(App)

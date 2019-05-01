@@ -13,6 +13,9 @@
       "version": "5.0.0"
     }
   },
+  "scripts": {
+    "api": "node mock-api/index.js"
+  },
   "dependencies": {
     "@vue/devtools": "^5.0.0",
     "axios": "^0.18.0",
@@ -34,6 +37,7 @@
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
+    "express": "^4.16.4",
     "lazy": "1.0.11",
     "nativescript-dev-webpack": "next",
     "nativescript-vue-template-compiler": "^2.0.0",
